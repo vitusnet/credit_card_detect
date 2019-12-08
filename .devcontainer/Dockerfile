@@ -22,6 +22,7 @@ RUN apt-get update \
     #
     # Install pylint
     && pip --disable-pip-version-check --no-cache-dir install pylint \
+    && pip --no-cache-dir install numpy jupyterlab matplotlib altair vega_datasets notebook vega \
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid $USER_GID $USERNAME \
